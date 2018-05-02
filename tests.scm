@@ -10,9 +10,12 @@
 ;;; *** Add your own tests here! ***
 ;;; ********************************
 ; BEGIN PROBLEM 0
-'replace-this-line
+(define (sum n total)
+  (if (zero? n) total
+      (sum (- n 1) (+ n total))))
+(sum 3 0)
+; expect 6
 ; END PROBLEM 0
-
 ;;; These are examples from several sections of "The Structure
 ;;; and Interpretation of Computer Programs" by Abelson and Sussman.
 
@@ -60,7 +63,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Move the following (exit) line down the file to run additional tests. ;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(exit)
 
 
 ;;; 1.1.2
@@ -584,7 +586,6 @@ one-through-four
 ;;; Extra credit ;;;
 ;;;;;;;;;;;;;;;;;;;;
 
-(exit)
 
 ; Tail call optimization tests
 
@@ -611,7 +612,7 @@ one-through-four
 (sum 1001 0)
 ; expect 501501
 
-(exit)
+;; (exit)
 
 ; macro tests
 
